@@ -8,17 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		524A55F527CF862000205201 /* PizzaShopWithSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A55F427CF862000205201 /* PizzaShopWithSwiftUIApp.swift */; };
-		524A55F727CF862000205201 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A55F627CF862000205201 /* ContentView.swift */; };
+		524A55F727CF862000205201 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A55F627CF862000205201 /* AuthView.swift */; };
 		524A55F927CF862300205201 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 524A55F827CF862300205201 /* Assets.xcassets */; };
 		524A55FC27CF862300205201 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 524A55FB27CF862300205201 /* Preview Assets.xcassets */; };
+		524A565A27D3EA9700205201 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A565927D3EA9700205201 /* MainTabBar.swift */; };
+		524A565C27D3EE1B00205201 /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A565B27D3EE1A00205201 /* CatalogView.swift */; };
+		524A565E27D3EF3700205201 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A565D27D3EF3700205201 /* CartView.swift */; };
+		524A566027D3EF5100205201 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A565F27D3EF5100205201 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		524A55F127CF862000205201 /* PizzaShopWithSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaShopWithSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		524A55F427CF862000205201 /* PizzaShopWithSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaShopWithSwiftUIApp.swift; sourceTree = "<group>"; };
-		524A55F627CF862000205201 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		524A55F627CF862000205201 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		524A55F827CF862300205201 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		524A55FB27CF862300205201 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		524A565927D3EA9700205201 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
+		524A565B27D3EE1A00205201 /* CatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogView.swift; sourceTree = "<group>"; };
+		524A565D27D3EF3700205201 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		524A565F27D3EF5100205201 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +60,11 @@
 			isa = PBXGroup;
 			children = (
 				524A55F427CF862000205201 /* PizzaShopWithSwiftUIApp.swift */,
-				524A55F627CF862000205201 /* ContentView.swift */,
+				524A55F627CF862000205201 /* AuthView.swift */,
+				524A565927D3EA9700205201 /* MainTabBar.swift */,
+				524A565B27D3EE1A00205201 /* CatalogView.swift */,
+				524A565D27D3EF3700205201 /* CartView.swift */,
+				524A565F27D3EF5100205201 /* ProfileView.swift */,
 				524A55F827CF862300205201 /* Assets.xcassets */,
 				524A55FA27CF862300205201 /* Preview Content */,
 			);
@@ -137,8 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				524A55F727CF862000205201 /* ContentView.swift in Sources */,
+				524A565E27D3EF3700205201 /* CartView.swift in Sources */,
+				524A565A27D3EA9700205201 /* MainTabBar.swift in Sources */,
+				524A55F727CF862000205201 /* AuthView.swift in Sources */,
 				524A55F527CF862000205201 /* PizzaShopWithSwiftUIApp.swift in Sources */,
+				524A566027D3EF5100205201 /* ProfileView.swift in Sources */,
+				524A565C27D3EE1B00205201 /* CatalogView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

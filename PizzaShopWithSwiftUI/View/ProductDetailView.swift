@@ -10,32 +10,49 @@ import SwiftUI
 struct ProductDetailView: View {
     
     var viewModel: ProductDetailViewModel
-    @State var size = ""
+    @State var size = "Маленькая"
     var body: some View {
-        VStack(alignment: .leading) {
-            Image("pizzaPH")
-                .resizable()
-                .frame(maxWidth: .infinity, maxHeight: 260)
-                //.aspectRatio(contentMode: .)
-            HStack {
-                Text("\(viewModel.product.tittle)")
-                    .font(.title2.bold())
+        VStack {
+            VStack(alignment: .leading) {
+                Image("pizzaPH")
+                    .resizable()
+                    .frame(maxWidth: .infinity, maxHeight: 260)
+                    //.aspectRatio(contentMode: .)
+                HStack {
+                    Text("\(viewModel.product.tittle)")
+                        .font(.title2.bold())
+                    
+                    Spacer()
+                    Text("\(viewModel.getPrice(size: self.size)) ₽")
+                        .font(.title2)
+                }.padding(.horizontal)
+                Text("\(viewModel.product.descript)")
+                    .padding(.horizontal)
+                    .padding(.vertical, 4)
                 
-                Spacer()
-                Text("\(viewModel.product.price) ₽")
-                    .font(.title2)
-            }.padding(.horizontal)
-            Text("\(viewModel.product.descript)")
-                .padding(.horizontal)
-                .padding(.vertical, 4)
-            
-            
-            
-            Picker("Размер пиццы", selection: $size) {
-                ForEach(viewModel.sizes, id: \.self) { item in
-                    Text(item)
-                }
-            }.pickerStyle(.segmented)
+                
+                
+                Picker("Размер пиццы", selection: $size) {
+                    ForEach(viewModel.sizes, id: \.self) { item in
+                        Text(item)
+                    }
+                }.pickerStyle(.segmented)
+                    .padding()
+                
+                
+            }
+            Button {
+                print("Добавить в карзину")
+            } label: {
+                Text("В корзину!")
+                    .padding()
+                    .padding(.horizontal, 60)
+                    .foregroundColor(Color("darkBrown"))
+                    .font(.title3.bold())
+                    .background(LinearGradient(colors: [Color("yellow"), Color("orange")], startPoint: .leading, endPoint: .trailing))
+                    .cornerRadius(20)
+            }
+
             Spacer()
         }
         

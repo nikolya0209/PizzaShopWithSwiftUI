@@ -1,0 +1,21 @@
+//
+//  PositionCell.swift
+//  PizzaShopWithSwiftUI
+//
+//  Created by MacBookPro on 07.03.2022.
+//
+
+import SwiftUI
+
+struct PositionCell: View {
+    
+    var body: some View {
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    }
+}
+
+struct PositionCell_Previews: PreviewProvider {
+    static var previews: some View {
+        PositionCell()
+    }
+}

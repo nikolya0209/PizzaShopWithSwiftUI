@@ -11,6 +11,8 @@ struct ProductDetailView: View {
     
     var viewModel: ProductDetailViewModel
     @State var size = "Маленькая"
+    @State var count = 1
+    
     var body: some View {
         VStack {
             VStack(alignment: .leading) {
@@ -30,7 +32,11 @@ struct ProductDetailView: View {
                     .padding(.horizontal)
                     .padding(.vertical, 4)
                 
-                
+                HStack {
+                    Stepper("Количество", value: $count, in: 1...10)
+                    Text("\(self.count)")
+                        .padding(.leading, 32)
+                }.padding(.horizontal)
                 
                 Picker("Размер пиццы", selection: $size) {
                     ForEach(viewModel.sizes, id: \.self) { item in

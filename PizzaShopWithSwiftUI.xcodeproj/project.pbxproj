@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		52017A4027D67E1C008BD4B6 /* PositionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52017A3F27D67E1C008BD4B6 /* PositionCell.swift */; };
 		52017A4227D680C9008BD4B6 /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52017A4127D680C9008BD4B6 /* ProductDetailViewModel.swift */; };
+		52017A4427D6925A008BD4B6 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52017A4327D6925A008BD4B6 /* CartViewModel.swift */; };
+		52017A4627D69296008BD4B6 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52017A4527D69296008BD4B6 /* Position.swift */; };
 		524A55F527CF862000205201 /* PizzaShopWithSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A55F427CF862000205201 /* PizzaShopWithSwiftUIApp.swift */; };
 		524A55F727CF862000205201 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A55F627CF862000205201 /* AuthView.swift */; };
 		524A55F927CF862300205201 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 524A55F827CF862300205201 /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 /* Begin PBXFileReference section */
 		52017A3F27D67E1C008BD4B6 /* PositionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionCell.swift; sourceTree = "<group>"; };
 		52017A4127D680C9008BD4B6 /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
+		52017A4327D6925A008BD4B6 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		52017A4527D69296008BD4B6 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		524A55F127CF862000205201 /* PizzaShopWithSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaShopWithSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		524A55F427CF862000205201 /* PizzaShopWithSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaShopWithSwiftUIApp.swift; sourceTree = "<group>"; };
 		524A55F627CF862000205201 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				524A566527D521EC00205201 /* Product.swift */,
+				52017A4527D69296008BD4B6 /* Position.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			children = (
 				524A566B27D52B9100205201 /* CatalogViewModel.swift */,
 				52017A4127D680C9008BD4B6 /* ProductDetailViewModel.swift */,
+				52017A4327D6925A008BD4B6 /* CartViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -199,9 +205,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52017A4627D69296008BD4B6 /* Position.swift in Sources */,
 				524A565E27D3EF3700205201 /* CartView.swift in Sources */,
 				524A566F27D532C900205201 /* ProductDetailView.swift in Sources */,
 				524A565A27D3EA9700205201 /* MainTabBar.swift in Sources */,
+				52017A4427D6925A008BD4B6 /* CartViewModel.swift in Sources */,
 				524A55F727CF862000205201 /* AuthView.swift in Sources */,
 				524A55F527CF862000205201 /* PizzaShopWithSwiftUIApp.swift in Sources */,
 				524A566027D3EF5100205201 /* ProfileView.swift in Sources */,

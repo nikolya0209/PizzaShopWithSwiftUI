@@ -27,7 +27,41 @@ struct CartView: View {
                 Text("\(self.viewModel.cost) ₽")
                     .fontWeight(.bold)
             }.padding()
+            
+            HStack(spacing: 24) {
+                Button {
+                    print("Отменить")
+                } label: {
+                    Text("Отменить")
+                        .font(.body)
+                        .fontWeight(.bold)
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.red)
+                        .cornerRadius(24)
+                }
+                
+                Button {
+                    print("Заказать")
+                } label: {
+                    Text("Заказать")
+                        .font(.body)
+                        .fontWeight(.bold)
+                        .padding()
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .background(Color.green)
+                        .cornerRadius(24)
+                }
+
+            }.padding()
+            
+            
+            
         }
+        
+        
+        
     }
     
 }

@@ -9,9 +9,11 @@ import SwiftUI
 
 struct ProductDetailView: View {
     
-    var viewModel: ProductDetailViewModel
+    @StateObject var viewModel: ProductDetailViewModel
     @State var size = "Маленькая"
     @State var count = 1
+    
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         VStack {
@@ -48,7 +50,11 @@ struct ProductDetailView: View {
                 
             }
             Button {
-                print("Добавить в карзину")
+                let position = Position(id: UUID().uuidString,
+                                        product: viewModel.product,
+                                        count: self.count)
+                CartViewModel.shared.addPosition(position)
+                presentationMode.wrappedValue.dismiss()
             } label: {
                 Text("В корзину!")
                     .padding()

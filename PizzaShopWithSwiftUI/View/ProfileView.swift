@@ -10,7 +10,7 @@ import SwiftUI
 struct ProfileView: View {
     var body: some View {
         
-        VStack(alignment: .leading, spacing: 20) {
+        VStack(alignment: .center, spacing: 20) {
         
         HStack(spacing: 16) {
             Image("user")
@@ -32,9 +32,22 @@ struct ProfileView: View {
                 .bold()
             Text("Беларусь, г. Гродно, ул. Василька, дом 9")
             }
+            
             List{
-                
+                Text("Ваши заказы будут тут")
             }.listStyle(.plain)
+            
+            Button {
+                print("Quit")
+            } label: {
+                Text("Выйти")
+                    .padding()
+                    .padding(.horizontal, 30)
+                    .background(Color.red)
+                    .foregroundColor(.white)
+                    .cornerRadius(20)
+            }
+
         }
     }
 }

@@ -10,6 +10,8 @@ import SwiftUI
 struct ProfileView: View {
     
     @State var isAvaAlertPresented = false
+    @State var isQuitAlertPresented = false
+    @State var isAuthViewPresented = false
     
     var body: some View {
         
@@ -58,7 +60,7 @@ struct ProfileView: View {
             }.listStyle(.plain)
             
             Button {
-                print("Quit")
+                isQuitAlertPresented.toggle()
             } label: {
                 Text("Выйти")
                     .padding()
@@ -66,8 +68,18 @@ struct ProfileView: View {
                     .background(Color.red)
                     .foregroundColor(.white)
                     .cornerRadius(20)
-            }
+            }.padding()
+                .confirmationDialog("Действительно выйти?", isPresented: $isQuitAlertPresented) {
+                    Button {
+                        isAuthViewPresented.toggle()
+                    } label: {
+                        Text("Да")
+                    }
 
+                }
+                .fullScreenCover(isPresented: $isAuthViewPresented, onDismiss: nil) {
+                    AuthView()
+                }
         }
     }
 }

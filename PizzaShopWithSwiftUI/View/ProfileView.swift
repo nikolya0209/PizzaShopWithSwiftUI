@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ProfileView: View {
+    
+    @State var isAvaAlertPresented = false
+    
     var body: some View {
         
         VStack(alignment: .center, spacing: 20) {
@@ -19,6 +22,23 @@ struct ProfileView: View {
                 .padding(8)
                 .background(Color("lightGray"))
                 .clipShape(Circle())
+                .onTapGesture {
+                    isAvaAlertPresented.toggle()
+                }
+                .confirmationDialog("Откуда взять фотку", isPresented: $isAvaAlertPresented) {
+                    Button {
+                        print("Library")
+                    } label: {
+                        Text("Из галереи")
+                    }
+                    
+                    Button {
+                        print("Camera")
+                    } label: {
+                        Text("Из камеры")
+                    }
+                    
+                }
             
             VStack(alignment: .leading, spacing: 12) {
                 Text("Владислав Иванович")

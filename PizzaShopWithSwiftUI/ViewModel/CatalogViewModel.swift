@@ -6,8 +6,12 @@
 //
 
 import Foundation
+import Firebase
 
 class CatalogViewModel: ObservableObject {
+    
+    let db = Firestore.firestore()
+    
     
     static let shared = CatalogViewModel()
     

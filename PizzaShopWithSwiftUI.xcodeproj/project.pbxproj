@@ -12,6 +12,7 @@
 		520002F627EA183D001E7D23 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 520002F527EA183D001E7D23 /* FirebaseDatabase */; };
 		520002F827EA183D001E7D23 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 520002F727EA183D001E7D23 /* FirebaseFirestore */; };
 		520002FA27EA183D001E7D23 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 520002F927EA183D001E7D23 /* FirebaseStorage */; };
+		520002FD27EFA11A001E7D23 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520002FC27EFA119001E7D23 /* AuthService.swift */; };
 		52017A4027D67E1C008BD4B6 /* PositionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52017A3F27D67E1C008BD4B6 /* PositionCell.swift */; };
 		52017A4227D680C9008BD4B6 /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52017A4127D680C9008BD4B6 /* ProductDetailViewModel.swift */; };
 		52017A4427D6925A008BD4B6 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52017A4327D6925A008BD4B6 /* CartViewModel.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		520002A227E50BFA001E7D23 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		520002FC27EFA119001E7D23 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		52017A3F27D67E1C008BD4B6 /* PositionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionCell.swift; sourceTree = "<group>"; };
 		52017A4127D680C9008BD4B6 /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
 		52017A4327D6925A008BD4B6 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
@@ -66,6 +68,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		520002FE27EFA11F001E7D23 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				520002FC27EFA119001E7D23 /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		524A55E827CF861F00205201 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				524A55F427CF862000205201 /* PizzaShopWithSwiftUIApp.swift */,
+				520002FE27EFA11F001E7D23 /* Services */,
 				524A566A27D52B5900205201 /* Model */,
 				524A566427D521CF00205201 /* View */,
 				524A566D27D52BA100205201 /* ViewModel */,
@@ -238,6 +249,7 @@
 				524A565C27D3EE1B00205201 /* CatalogView.swift in Sources */,
 				524A566627D521EC00205201 /* Product.swift in Sources */,
 				524A566C27D52B9100205201 /* CatalogViewModel.swift in Sources */,
+				520002FD27EFA11A001E7D23 /* AuthService.swift in Sources */,
 				52017A4027D67E1C008BD4B6 /* PositionCell.swift in Sources */,
 				52017A4227D680C9008BD4B6 /* ProductDetailViewModel.swift in Sources */,
 			);

@@ -14,6 +14,8 @@ struct AuthView: View {
     @State private var password = ""
     @State private var confimPassword = ""
     @State private var isTableViewShow = false
+    @State private var isShowAlert = false
+    @State private var alertMessage = ""
     
     var body: some View {
         VStack(spacing: 30) {
@@ -52,11 +54,32 @@ struct AuthView: View {
                         isTableViewShow.toggle()
                         print("Авторизация")
                     } else {
+                        
+                        guard password == confimPassword else {
+                            self.alertMessage = "Пароли не совпадают!"
+                            self.isShowAlert.toggle()
+                            return
+                        }
+                        
                         print("Регистрация")
-                        self.email = ""
-                        self.password = ""
-                        self.confimPassword = ""
-                        self.isAuth.toggle()
+                        AuthService.shared.signUP(email: self.email, password: self.password) { result in
+                            switch result {
+                            case .success(let user):
+                                alertMessage = "Вы зарегистрировались с email \(user.email!)"
+                                self.isShowAlert.toggle()
+                                self.email = ""
+                                self.password = ""
+                                self.confimPassword = ""
+                                self.isAuth.toggle()
+                                
+                            case .failure(let error):
+                                alertMessage = "Ошибка регистрации \(error.localizedDescription)"
+                                self.isShowAlert.toggle()
+                            }
+                        }
+                        
+                        
+                        
                     }
                    
                 } label: {
@@ -90,7 +113,13 @@ struct AuthView: View {
             .background(Color("whiteAlfa"))
             .cornerRadius(24)
             .padding(isAuth ? 30 : 12)
-            
+            .alert(alertMessage, isPresented: $isShowAlert) {
+                Button {
+                } label: {
+                    Text("OK")
+                }
+
+            }
             
         }.frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Image("bg"))

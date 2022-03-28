@@ -51,8 +51,19 @@ struct AuthView: View {
                 
                 Button {
                     if isAuth {
-                        isTableViewShow.toggle()
                         print("Авторизация")
+                        AuthService.shared.signIn(email: self.email, password: self.password) { result in
+                            switch result {
+                                
+                            case .success(let user):
+                                isTableViewShow.toggle()
+                            case .failure(let error):
+                                alertMessage = "Ошибка авторизации: \(error.localizedDescription)"
+                                isShowAlert.toggle()
+                            }
+                        }
+                        
+                       
                     } else {
                         
                         guard password == confimPassword else {

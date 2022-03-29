@@ -55,7 +55,7 @@ struct AuthView: View {
                         AuthService.shared.signIn(email: self.email, password: self.password) { result in
                             switch result {
                                 
-                            case .success(let user):
+                            case .success(_):
                                 isTableViewShow.toggle()
                             case .failure(let error):
                                 alertMessage = "Ошибка авторизации: \(error.localizedDescription)"
@@ -139,7 +139,9 @@ struct AuthView: View {
         
             .animation(Animation.easeInOut(duration: 0.3), value: isAuth)
             .fullScreenCover(isPresented: $isTableViewShow) {
-                MainTabBar()
+                
+                let mainTabBarViewModel = MainTabBarViewModel(user: AuthService.shared.currentUser!)
+                MainTabBar(viewModel: mainTabBarViewModel)
             }
         
     }

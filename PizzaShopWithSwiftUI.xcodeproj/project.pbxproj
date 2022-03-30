@@ -31,6 +31,7 @@
 		524A566F27D532C900205201 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A566E27D532C900205201 /* ProductDetailView.swift */; };
 		52E2A60627F372B300E69F18 /* MainTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2A60527F372B300E69F18 /* MainTabBarViewModel.swift */; };
 		52E2A60827F499AC00E69F18 /* MvUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2A60727F499AC00E69F18 /* MvUser.swift */; };
+		52E2A60A27F49B0F00E69F18 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2A60927F49B0F00E69F18 /* DatabaseService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		524A566E27D532C900205201 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		52E2A60527F372B300E69F18 /* MainTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewModel.swift; sourceTree = "<group>"; };
 		52E2A60727F499AC00E69F18 /* MvUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvUser.swift; sourceTree = "<group>"; };
+		52E2A60927F49B0F00E69F18 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				520002FC27EFA119001E7D23 /* AuthService.swift */,
+				52E2A60927F49B0F00E69F18 /* DatabaseService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E2A60A27F49B0F00E69F18 /* DatabaseService.swift in Sources */,
 				52E2A60827F499AC00E69F18 /* MvUser.swift in Sources */,
 				52017A4627D69296008BD4B6 /* Position.swift in Sources */,
 				52E2A60627F372B300E69F18 /* MainTabBarViewModel.swift in Sources */,

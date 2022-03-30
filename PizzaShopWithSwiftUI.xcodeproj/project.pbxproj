@@ -30,6 +30,7 @@
 		524A566C27D52B9100205201 /* CatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A566B27D52B9100205201 /* CatalogViewModel.swift */; };
 		524A566F27D532C900205201 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A566E27D532C900205201 /* ProductDetailView.swift */; };
 		52E2A60627F372B300E69F18 /* MainTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2A60527F372B300E69F18 /* MainTabBarViewModel.swift */; };
+		52E2A60827F499AC00E69F18 /* MvUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2A60727F499AC00E69F18 /* MvUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		524A566B27D52B9100205201 /* CatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewModel.swift; sourceTree = "<group>"; };
 		524A566E27D532C900205201 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		52E2A60527F372B300E69F18 /* MainTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewModel.swift; sourceTree = "<group>"; };
+		52E2A60727F499AC00E69F18 /* MvUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			children = (
 				524A566527D521EC00205201 /* Product.swift */,
 				52017A4527D69296008BD4B6 /* Position.swift */,
+				52E2A60727F499AC00E69F18 /* MvUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E2A60827F499AC00E69F18 /* MvUser.swift in Sources */,
 				52017A4627D69296008BD4B6 /* Position.swift in Sources */,
 				52E2A60627F372B300E69F18 /* MainTabBarViewModel.swift in Sources */,
 				524A565E27D3EF3700205201 /* CartView.swift in Sources */,

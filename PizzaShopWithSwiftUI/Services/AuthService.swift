@@ -19,10 +19,19 @@ class AuthService {
         return auth.currentUser
     }
     
-    func signUP(email: String, password: String, completion: @escaping (Result<User, Error>) -> ()) {
+    func signUp(email: String, password: String, completion: @escaping (Result<User, Error>) -> ()) {
         auth.createUser(withEmail: email, password: password) { result, error in
             if let result = result {
-                completion(.success(result.user))
+                let mvUser = MvUser(id: result.user.uid, name: "", phone: 0, adress: "")
+                DatabaseService.shared.setUser(user: mvUser) { resultDB in
+                    switch resultDB {
+                    case .success(_):
+                        completion(.success(result.user))
+                    case .failure(let error):
+                        completion(.failure(error))
+                    }
+                }
+                
             } else if let error = error {
                 completion(.failure(error))
             }

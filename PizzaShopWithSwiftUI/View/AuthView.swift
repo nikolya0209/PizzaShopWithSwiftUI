@@ -73,7 +73,7 @@ struct AuthView: View {
                         }
                         
                         print("Регистрация")
-                        AuthService.shared.signUP(email: self.email, password: self.password) { result in
+                        AuthService.shared.signUp(email: self.email, password: self.password) { result in
                             switch result {
                             case .success(let user):
                                 alertMessage = "Вы зарегистрировались с email \(user.email!)"

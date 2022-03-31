@@ -26,7 +26,6 @@ class DatabaseService {
             } else {
                 completion(.success(user))
             }
-            
         }
     }
     

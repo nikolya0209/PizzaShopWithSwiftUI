@@ -13,6 +13,10 @@ struct ProfileView: View {
     @State var isQuitAlertPresented = false
     @State var isAuthViewPresented = false
     
+    @State var name: String = "Имя Фамилия"
+    @State var phone: Int = 3745298839022
+    @State var adress: String = "Ваш адресс будет тут"
+    
     var body: some View {
         
         VStack(alignment: .center, spacing: 20) {
@@ -43,9 +47,13 @@ struct ProfileView: View {
                 }
             
             VStack(alignment: .leading, spacing: 12) {
-                Text("Владислав Иванович")
-                    .bold()
-                Text("+7 329 23 322 23")
+                TextField("Имя", text: $name)
+                    .font(.body.bold())
+                HStack{
+                    Text("+7")
+                    TextField("Телефон", value: $phone, format: .number)
+                }
+                
             }
         }
             

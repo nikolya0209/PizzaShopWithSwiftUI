@@ -60,7 +60,7 @@ struct ProfileView: View {
             VStack(alignment: .leading, spacing: 2) {
             Text("Адрес доставки: ")
                 .bold()
-            Text("Беларусь, г. Гродно, ул. Василька, дом 9")
+                TextField("Ваш адрес", text: $adress)
             }
             
             List{

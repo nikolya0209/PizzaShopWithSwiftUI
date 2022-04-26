@@ -53,15 +53,14 @@ struct ProfileView: View {
                     Text("+7")
                     TextField("Телефон", value: $phone, format: .number)
                 }
-                
             }
-        }
+        }.padding()
             
             VStack(alignment: .leading, spacing: 2) {
             Text("Адрес доставки: ")
                 .bold()
                 TextField("Ваш адрес", text: $adress)
-            }
+            }.padding(.horizontal)
             
             List{
                 Text("Ваши заказы будут тут")

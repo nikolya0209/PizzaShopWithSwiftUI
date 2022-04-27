@@ -19,7 +19,7 @@ class DatabaseService {
     
     private init() {}
     
-    func setUser(user: MvUser, completion: @escaping (Result<MvUser, Error>) -> ()) {
+    func setProfile(user: MvUser, completion: @escaping (Result<MvUser, Error>) -> ()) {
         userRef.document(user.id).setData(user.representation) { error in
             if let error = error {
                 completion(.failure(error))
@@ -29,6 +29,9 @@ class DatabaseService {
         }
     }
     
+    func getProfile() {
+        
+    }
     
     
 }

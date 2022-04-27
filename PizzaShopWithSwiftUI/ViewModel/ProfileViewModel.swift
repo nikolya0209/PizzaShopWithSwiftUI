@@ -14,4 +14,20 @@ class ProfileViewModel: ObservableObject {
     init(profile: MvUser) {
         self.profile = profile
     }
+    
+    func setProfile() {
+        DatabaseService.shared.setProfile(user: self.profile) { result in
+            switch result {
+                
+            case .success(let user):
+                print(user.name)
+            case .failure(let error):
+                print("Ошибка отпраки данных \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    func getProfile() {
+        
+    }
 }

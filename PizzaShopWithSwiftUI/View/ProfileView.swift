@@ -81,11 +81,13 @@ struct ProfileView: View {
                     } label: {
                         Text("Да")
                     }
-
                 }
                 .fullScreenCover(isPresented: $isAuthViewPresented, onDismiss: nil) {
                     AuthView()
                 }
+        }
+        .onSubmit {
+            viewModel.setProfile()
         }
     }
 }

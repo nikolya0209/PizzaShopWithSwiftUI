@@ -28,6 +28,14 @@ class ProfileViewModel: ObservableObject {
     }
     
     func getProfile() {
-        
+        DatabaseService.shared.getProfile { result in
+            switch result {
+                
+            case .success(let user):
+                self.profile = user
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }

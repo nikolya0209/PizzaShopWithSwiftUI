@@ -37,9 +37,9 @@ class DatabaseService {
             guard let userName = data["name"] as? String else { return }
             guard let id = data["id"] as? String else { return }
             guard let phone = data["phone"] as? Int else { return }
-            guard let address = data["addres"] as? String else { return }
+            guard let adress = data["adress"] as? String else { return }
             
-            let user = MvUser(id: id, name: userName, phone: phone, adress: address)
+            let user = MvUser(id: id, name: userName, phone: phone, adress: adress)
             completion(.success(user))
             
         }

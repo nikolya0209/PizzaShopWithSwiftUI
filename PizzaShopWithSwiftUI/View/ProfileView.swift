@@ -13,6 +13,10 @@ struct ProfileView: View {
     @State var isQuitAlertPresented = false
     @State var isAuthViewPresented = false
     
+    @State var name: String = "adsad"
+    @State var phone: Int = 22212
+    @State var adress: String = "adsad"
+    
     @StateObject var viewModel: ProfileViewModel
     
   
@@ -50,7 +54,7 @@ struct ProfileView: View {
                     .font(.body.bold())
                 HStack{
                     Text("+7")
-                    TextField("Телефон", value: $viewModel.profile.phone, format: .number)
+                    TextField("Телефон", value: $viewModel.profile.phone, format: IntegerFormatStyle.number)
                 }
             }
         }.padding()
@@ -88,6 +92,9 @@ struct ProfileView: View {
         }
         .onSubmit {
             viewModel.setProfile()
+        }
+        .onAppear {
+            self.viewModel.getProfile()
         }
     }
 }

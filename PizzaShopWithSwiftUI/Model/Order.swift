@@ -9,7 +9,7 @@ import Foundation
 
 struct Order {
     var id: String = UUID().uuidString
-    var eserID: String
+    var userID: String
     var positions = [Position]()
     var date: Date
     var status: String
@@ -20,5 +20,16 @@ struct Order {
             sum += position.cost
         }
         return sum
+    }
+    
+    var representation: [String: Any] {
+    
+        var repres = [String: Any]()
+        repres["id"] = id
+        repres["userID"] = userID
+        repres["date"] = date
+        repres["status"] = status
+        
+        return repres
     }
 }

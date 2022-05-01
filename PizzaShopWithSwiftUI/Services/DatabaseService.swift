@@ -16,8 +16,21 @@ class DatabaseService {
     private var userRef: CollectionReference {
         return db.collection("users")
     }
+    private var orderRef: CollectionReference {
+        return db.collection("orders")
+    }
     
     private init() {}
+    
+    func setOrder(order: Order, completion: @escaping (Result<Order, Error>)-> ()) {
+        orderRef.document(order.id).setData(order.representation) { error in
+            if let error = error {
+                completion(.failure(error))
+            } else {
+                completion(.success(order))
+            }
+        }
+    }
     
     func setProfile(user: MvUser, completion: @escaping (Result<MvUser, Error>) -> ()) {
         userRef.document(user.id).setData(user.representation) { error in

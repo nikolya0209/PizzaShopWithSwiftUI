@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 struct Order {
     var id: String = UUID().uuidString
@@ -27,7 +28,7 @@ struct Order {
         var repres = [String: Any]()
         repres["id"] = id
         repres["userID"] = userID
-        repres["date"] = date
+        repres["date"] = Timestamp(date: date)
         repres["status"] = status
         
         return repres

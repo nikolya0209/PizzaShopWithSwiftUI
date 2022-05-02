@@ -53,6 +53,11 @@ struct CartView: View {
                 
                 Button {
                     print("Заказать")
+                    let order = Order(userID: AuthService.shared.currentUser!.uid,
+                                      date: <#T##Date#>,
+                                      status: <#T##String#>,
+                                      cost: <#T##Int#>,
+                                      representation: <#T##[String : Any]#>)
                 } label: {
                     Text("Заказать")
                         .font(.body)

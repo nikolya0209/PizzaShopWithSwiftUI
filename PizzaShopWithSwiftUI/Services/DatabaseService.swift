@@ -22,6 +22,12 @@ class DatabaseService {
     
     private init() {}
     
+    func getOrders(by userID: String?, completion: @escaping (Result<[Order], Error>)-> ()) {
+        self.orderRef.getDocuments { qSnap, error in
+            <#code#>
+        }
+    }
+    
     func setOrder(order: Order, completion: @escaping (Result<Order, Error>)-> ()) {
         orderRef.document(order.id).setData(order.representation) { error in
             if let error = error {

@@ -16,7 +16,10 @@ struct OrderCell: View {
             Text("\(order.date)")
             Text("\(order.cost)")
                 .bold()
+                .frame(width: 90)
             Text("\(order.status)")
+                .frame(width: 100)
+                .foregroundColor(.green)
         }
         
     }

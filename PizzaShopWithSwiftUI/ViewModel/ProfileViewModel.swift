@@ -10,7 +10,7 @@ import SwiftUI
 
 class ProfileViewModel: ObservableObject {
     @Published var profile: MvUser
-    @Published var orders: [Order]
+    @Published var orders: [Order] = [Order]()
     
     init(profile: MvUser) {
         self.profile = profile

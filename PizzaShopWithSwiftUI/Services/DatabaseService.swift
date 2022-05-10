@@ -22,6 +22,10 @@ class DatabaseService {
     
     private init() {}
     
+    func getPositions(by userID: String?, completion: @escaping (Result<[Position], Error>)-> ()) {
+        
+    }
+    
     func getOrders(by userID: String?, completion: @escaping (Result<[Order], Error>)-> ()) {
         
         self.orderRef.getDocuments { qSnap, error in

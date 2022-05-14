@@ -33,6 +33,7 @@
 		524A566C27D52B9100205201 /* CatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A566B27D52B9100205201 /* CatalogViewModel.swift */; };
 		524A566F27D532C900205201 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524A566E27D532C900205201 /* ProductDetailView.swift */; };
 		52BDE58B282661E60013F8C8 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BDE58A282661E60013F8C8 /* OrderCell.swift */; };
+		52DF3FF428301EB10070550C /* AdminOrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF3FF328301EB10070550C /* AdminOrdersView.swift */; };
 		52E2A60627F372B300E69F18 /* MainTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2A60527F372B300E69F18 /* MainTabBarViewModel.swift */; };
 		52E2A60827F499AC00E69F18 /* MvUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2A60727F499AC00E69F18 /* MvUser.swift */; };
 		52E2A60A27F49B0F00E69F18 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2A60927F49B0F00E69F18 /* DatabaseService.swift */; };
@@ -62,6 +63,7 @@
 		524A566B27D52B9100205201 /* CatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewModel.swift; sourceTree = "<group>"; };
 		524A566E27D532C900205201 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		52BDE58A282661E60013F8C8 /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
+		52DF3FF328301EB10070550C /* AdminOrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminOrdersView.swift; sourceTree = "<group>"; };
 		52E2A60527F372B300E69F18 /* MainTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewModel.swift; sourceTree = "<group>"; };
 		52E2A60727F499AC00E69F18 /* MvUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvUser.swift; sourceTree = "<group>"; };
 		52E2A60927F49B0F00E69F18 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				524A55F627CF862000205201 /* AuthView.swift */,
+				52DF3FF528301EC90070550C /* AdminInterface */,
 				524A565927D3EA9700205201 /* MainTabBar.swift */,
 				524A565B27D3EE1A00205201 /* CatalogView.swift */,
 				524A565D27D3EF3700205201 /* CartView.swift */,
@@ -176,6 +179,14 @@
 				5249FD862818321400F530BA /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		52DF3FF528301EC90070550C /* AdminInterface */ = {
+			isa = PBXGroup;
+			children = (
+				52DF3FF328301EB10070550C /* AdminOrdersView.swift */,
+			);
+			path = AdminInterface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +280,7 @@
 				524A565A27D3EA9700205201 /* MainTabBar.swift in Sources */,
 				52017A4427D6925A008BD4B6 /* CartViewModel.swift in Sources */,
 				524A55F727CF862000205201 /* AuthView.swift in Sources */,
+				52DF3FF428301EB10070550C /* AdminOrdersView.swift in Sources */,
 				524A55F527CF862000205201 /* PizzaShopWithSwiftUIApp.swift in Sources */,
 				52BDE58B282661E60013F8C8 /* OrderCell.swift in Sources */,
 				5249FDA82820486A00F530BA /* OrderStatus.swift in Sources */,

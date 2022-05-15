@@ -12,10 +12,16 @@ let screen = UIScreen.main.bounds
 
 @main
 struct PizzaShopWithSwiftUIApp: App {
+    
     @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
     var body: some Scene {
         WindowGroup {
-            AuthView()
+            if let user = AuthService.shared.currentUser {
+                let viewModel = MainTabBarViewModel(user: user)
+                MainTabBar(viewModel: viewModel)
+            } else {
+                AuthView()
+            }
         }
     }
     class AppDelegate: NSObject, UIApplicationDelegate {

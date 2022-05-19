@@ -8,9 +8,16 @@
 import SwiftUI
 
 struct AdminOrdersView: View {
+    @StateObject var viewModel = AdminOrdersViewModel()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            .background(Color.mint)
+        List {
+            ForEach(viewModel.orders, id: \.id) { order in
+                OrderCell(order: order)
+            }.listStyle(.plain)
+                .onAppear {
+                    viewModel.getOrders()
+                }
+        }
     }
 }
 

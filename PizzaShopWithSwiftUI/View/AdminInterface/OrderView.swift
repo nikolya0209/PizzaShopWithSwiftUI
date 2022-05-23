@@ -8,13 +8,19 @@
 import SwiftUI
 
 struct OrderView: View {
+    @StateObject var viewModel: OrderViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            ForEach(viewModel.order.positions, id: \.id) {position in
+                PositionCell(position: position)
+            }
+        }
     }
 }
 
 struct OrderView_Previews: PreviewProvider {
     static var previews: some View {
-        OrderView()
+        OrderView(viewModel: OrderViewModel(order: Order(userID: "", date: Date(), status: "Новый")))
     }
 }

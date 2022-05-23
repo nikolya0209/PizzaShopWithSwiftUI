@@ -35,6 +35,8 @@
 		52BDE58B282661E60013F8C8 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BDE58A282661E60013F8C8 /* OrderCell.swift */; };
 		52DF3FF428301EB10070550C /* AdminOrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF3FF328301EB10070550C /* AdminOrdersView.swift */; };
 		52DF3FFE2832D54C0070550C /* AdminOrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF3FFD2832D54C0070550C /* AdminOrdersViewModel.swift */; };
+		52DF4004283811580070550C /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF4003283811580070550C /* OrderView.swift */; };
+		52DF4006283811920070550C /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF4005283811920070550C /* OrderViewModel.swift */; };
 		52E2A60627F372B300E69F18 /* MainTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2A60527F372B300E69F18 /* MainTabBarViewModel.swift */; };
 		52E2A60827F499AC00E69F18 /* MvUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2A60727F499AC00E69F18 /* MvUser.swift */; };
 		52E2A60A27F49B0F00E69F18 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2A60927F49B0F00E69F18 /* DatabaseService.swift */; };
@@ -66,6 +68,8 @@
 		52BDE58A282661E60013F8C8 /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		52DF3FF328301EB10070550C /* AdminOrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminOrdersView.swift; sourceTree = "<group>"; };
 		52DF3FFD2832D54C0070550C /* AdminOrdersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminOrdersViewModel.swift; sourceTree = "<group>"; };
+		52DF4003283811580070550C /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		52DF4005283811920070550C /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 		52E2A60527F372B300E69F18 /* MainTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewModel.swift; sourceTree = "<group>"; };
 		52E2A60727F499AC00E69F18 /* MvUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvUser.swift; sourceTree = "<group>"; };
 		52E2A60927F49B0F00E69F18 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
@@ -180,6 +184,7 @@
 				52017A4327D6925A008BD4B6 /* CartViewModel.swift */,
 				52E2A60527F372B300E69F18 /* MainTabBarViewModel.swift */,
 				5249FD862818321400F530BA /* ProfileViewModel.swift */,
+				52DF4005283811920070550C /* OrderViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				52DF3FF328301EB10070550C /* AdminOrdersView.swift */,
+				52DF4003283811580070550C /* OrderView.swift */,
 			);
 			path = AdminInterface;
 			sourceTree = "<group>";
@@ -291,9 +297,11 @@
 				524A566027D3EF5100205201 /* ProfileView.swift in Sources */,
 				524A566827D522F600205201 /* ProductCell.swift in Sources */,
 				524A565C27D3EE1B00205201 /* CatalogView.swift in Sources */,
+				52DF4004283811580070550C /* OrderView.swift in Sources */,
 				524A566627D521EC00205201 /* Product.swift in Sources */,
 				524A566C27D52B9100205201 /* CatalogViewModel.swift in Sources */,
 				520002FD27EFA11A001E7D23 /* AuthService.swift in Sources */,
+				52DF4006283811920070550C /* OrderViewModel.swift in Sources */,
 				52017A4027D67E1C008BD4B6 /* PositionCell.swift in Sources */,
 				52017A4227D680C9008BD4B6 /* ProductDetailViewModel.swift in Sources */,
 			);

@@ -12,7 +12,7 @@ struct OrderView: View {
     
     var body: some View {
         List {
-            ForEach(viewModel.order.positions, id: \.id) {position in
+            ForEach(viewModel.order.positions, id: \.id) { position in
                 PositionCell(position: position)
             }
         }

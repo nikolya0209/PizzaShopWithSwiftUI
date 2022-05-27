@@ -11,11 +11,21 @@ struct OrderView: View {
     @StateObject var viewModel: OrderViewModel
     
     var body: some View {
-        List {
-            ForEach(viewModel.order.positions, id: \.id) { position in
-                PositionCell(position: position)
+        
+        VStack(alignment: .leading, spacing: 8) {
+            Text("Вася Пупкин")
+                .font(.title3).bold()
+            Text("+7 998887766")
+                .bold()
+            Text("Улица Пушкина, 7")
+            List {
+                ForEach(viewModel.order.positions, id: \.id) { position in
+                    PositionCell(position: position)
+                }
             }
-        }
+        }.padding()
+        
+       
     }
 }
 

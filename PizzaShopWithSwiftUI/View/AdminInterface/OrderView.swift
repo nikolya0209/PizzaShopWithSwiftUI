@@ -10,6 +10,15 @@ import SwiftUI
 struct OrderView: View {
     @StateObject var viewModel: OrderViewModel
     
+    var statuses: [String] {
+        var sts = [String]()
+        
+        for status in OrderStatus.allCases {
+            sts.append(status.rawValue)
+        }
+        return sts
+    }
+    
     var body: some View {
         
         VStack(alignment: .leading, spacing: 8) {

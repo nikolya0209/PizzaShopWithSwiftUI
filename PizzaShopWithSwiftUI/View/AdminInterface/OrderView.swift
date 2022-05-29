@@ -13,18 +13,22 @@ struct OrderView: View {
     var body: some View {
         
         VStack(alignment: .leading, spacing: 8) {
-            Text("Вася Пупкин")
+            Text("\(viewModel.user.name)")
                 .font(.title3).bold()
-            Text("+7 998887766")
+            Text("\(viewModel.user.phone)")
                 .bold()
-            Text("Улица Пушкина, 7")
+            Text("\(viewModel.user.adress)")
             List {
                 ForEach(viewModel.order.positions, id: \.id) { position in
                     PositionCell(position: position)
                 }
+                Text("Итого: \(viewModel.order.cost) ₽")
+                    .bold()
             }
         }.padding()
-        
+            .onAppear {
+                viewModel.getUserData()
+            }
        
     }
 }

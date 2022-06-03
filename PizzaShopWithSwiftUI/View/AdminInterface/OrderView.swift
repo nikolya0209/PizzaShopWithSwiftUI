@@ -42,7 +42,14 @@ struct OrderView: View {
         }
         .pickerStyle(.segmented)
         .onChange(of: viewModel.order.status) { newStatus in
-            print(newStatus)
+            DatabaseService.shared.setOrder(order: viewModel.order) { result in
+                switch result {
+                case .success(let order):
+                    print(order.status)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
         }
 
         List {

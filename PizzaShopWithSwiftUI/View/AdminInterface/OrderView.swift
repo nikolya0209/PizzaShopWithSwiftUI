@@ -27,17 +27,18 @@ struct OrderView: View {
             Text("\(viewModel.user.phone)")
                 .bold()
             Text("\(viewModel.user.adress)")
-            List {
-                ForEach(viewModel.order.positions, id: \.id) { position in
-                    PositionCell(position: position)
-                }
-                Text("Итого: \(viewModel.order.cost) ₽")
-                    .bold()
-            }
+          
         }.padding()
             .onAppear {
                 viewModel.getUserData()
             }
+        List {
+            ForEach(viewModel.order.positions, id: \.id) { position in
+                PositionCell(position: position)
+            }
+            Text("Итого: \(viewModel.order.cost) ₽")
+                .bold()
+        }
        
     }
 }

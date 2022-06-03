@@ -32,6 +32,19 @@ struct OrderView: View {
             .onAppear {
                 viewModel.getUserData()
             }
+        
+        Picker(selection: $viewModel.order.status) {
+            ForEach(statuses, id: \.self) { status in
+                Text(status)
+            }
+        } label: {
+            Text("Статус заказа")
+        }
+        .pickerStyle(.segmented)
+        .onChange(of: viewModel.order.status) { newStatus in
+            print(newStatus)
+        }
+
         List {
             ForEach(viewModel.order.positions, id: \.id) { position in
                 PositionCell(position: position)

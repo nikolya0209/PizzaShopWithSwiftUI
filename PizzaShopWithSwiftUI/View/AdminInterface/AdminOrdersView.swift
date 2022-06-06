@@ -18,7 +18,8 @@ struct AdminOrdersView: View {
         VStack {
             
             Button {
-                
+                AuthService.shared.signOut()
+                isShowAuthView.toggle()
             } label: {
                 Text("Выход")
             }
@@ -41,6 +42,8 @@ struct AdminOrdersView: View {
                     OrderView(viewModel: orderViewModel)
                 }
             
+        }.fullScreenCover(isPresented: $isShowAuthView) {
+            AuthView()
         }
         
     }

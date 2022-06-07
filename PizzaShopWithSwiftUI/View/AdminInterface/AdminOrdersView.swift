@@ -16,15 +16,33 @@ struct AdminOrdersView: View {
     var body: some View {
         
         VStack {
-            
-            Button {
-                AuthService.shared.signOut()
-                isShowAuthView.toggle()
-            } label: {
-                Text("Выход")
-            }
+            HStack {
+                Button {
+                    AuthService.shared.signOut()
+                    isShowAuthView.toggle()
+                } label: {
+                    Text("Выход")
+                        .foregroundColor(.red)
+                }
+                Spacer()
+                Button {
+                    print("Добавить товар")
+                } label: {
+                    Text("Добавить товар")
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.green)
+                        .cornerRadius(8)
+                }
 
-            
+                Spacer()
+                Button {
+                    viewModel.getOrders()
+                } label: {
+                    Text("Обновить")
+                }
+            }.padding()
+                
             List {
                 ForEach(viewModel.orders, id: \.id) { order in
                     OrderCell(order: order)

@@ -37,6 +37,7 @@
 		52DF3FFE2832D54C0070550C /* AdminOrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF3FFD2832D54C0070550C /* AdminOrdersViewModel.swift */; };
 		52DF4004283811580070550C /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF4003283811580070550C /* OrderView.swift */; };
 		52DF4006283811920070550C /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF4005283811920070550C /* OrderViewModel.swift */; };
+		52DF4040285118420070550C /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF403F285118420070550C /* ImagePicker.swift */; };
 		52E2A60627F372B300E69F18 /* MainTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2A60527F372B300E69F18 /* MainTabBarViewModel.swift */; };
 		52E2A60827F499AC00E69F18 /* MvUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2A60727F499AC00E69F18 /* MvUser.swift */; };
 		52E2A60A27F49B0F00E69F18 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2A60927F49B0F00E69F18 /* DatabaseService.swift */; };
@@ -70,6 +71,7 @@
 		52DF3FFD2832D54C0070550C /* AdminOrdersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminOrdersViewModel.swift; sourceTree = "<group>"; };
 		52DF4003283811580070550C /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		52DF4005283811920070550C /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
+		52DF403F285118420070550C /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		52E2A60527F372B300E69F18 /* MainTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewModel.swift; sourceTree = "<group>"; };
 		52E2A60727F499AC00E69F18 /* MvUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvUser.swift; sourceTree = "<group>"; };
 		52E2A60927F49B0F00E69F18 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				524A566727D522F600205201 /* ProductCell.swift */,
 				52BDE58A282661E60013F8C8 /* OrderCell.swift */,
 				52017A3F27D67E1C008BD4B6 /* PositionCell.swift */,
+				52DF403F285118420070550C /* ImagePicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				52E2A60A27F49B0F00E69F18 /* DatabaseService.swift in Sources */,
 				52DF3FFE2832D54C0070550C /* AdminOrdersViewModel.swift in Sources */,
 				5249FD872818321400F530BA /* ProfileViewModel.swift in Sources */,
+				52DF4040285118420070550C /* ImagePicker.swift in Sources */,
 				5249FDA2281D5CD800F530BA /* Order.swift in Sources */,
 				52E2A60827F499AC00E69F18 /* MvUser.swift in Sources */,
 				52017A4627D69296008BD4B6 /* Position.swift in Sources */,
@@ -437,6 +441,8 @@
 				DEVELOPMENT_TEAM = C8V9DS8345;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Разрешите использовать камеру";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Разрешите открыть галерею для выбора фото";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -467,6 +473,8 @@
 				DEVELOPMENT_TEAM = C8V9DS8345;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Разрешите использовать камеру";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Разрешите открыть галерею для выбора фото";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

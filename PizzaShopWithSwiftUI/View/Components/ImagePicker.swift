@@ -9,14 +9,10 @@ import Foundation
 import SwiftUI
 
 struct ImagePicker: UIViewControllerRepresentable {
-    //typealias UIViewControllerType = <#type#>
     
     @Environment (\.presentationMode) private var presentationMode
-    
     var sourceType: UIImagePickerController.SourceType = .photoLibrary
     @Binding var selectedImage: UIImage
-    
-    
     
     func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> some UIImagePickerController {
         
@@ -25,7 +21,6 @@ struct ImagePicker: UIViewControllerRepresentable {
         imagePicker.delegate = context.coordinator
         
         return imagePicker
-        
     }
     
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) { }
@@ -48,5 +43,4 @@ struct ImagePicker: UIViewControllerRepresentable {
             parent.presentationMode.wrappedValue.dismiss()
         }
     }
-    
 }

@@ -38,6 +38,7 @@
 		52DF4004283811580070550C /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF4003283811580070550C /* OrderView.swift */; };
 		52DF4006283811920070550C /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF4005283811920070550C /* OrderViewModel.swift */; };
 		52DF4040285118420070550C /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF403F285118420070550C /* ImagePicker.swift */; };
+		52DF40422853904F0070550C /* AddProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF40412853904F0070550C /* AddProductView.swift */; };
 		52E2A60627F372B300E69F18 /* MainTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2A60527F372B300E69F18 /* MainTabBarViewModel.swift */; };
 		52E2A60827F499AC00E69F18 /* MvUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2A60727F499AC00E69F18 /* MvUser.swift */; };
 		52E2A60A27F49B0F00E69F18 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2A60927F49B0F00E69F18 /* DatabaseService.swift */; };
@@ -72,6 +73,7 @@
 		52DF4003283811580070550C /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		52DF4005283811920070550C /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 		52DF403F285118420070550C /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		52DF40412853904F0070550C /* AddProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductView.swift; sourceTree = "<group>"; };
 		52E2A60527F372B300E69F18 /* MainTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewModel.swift; sourceTree = "<group>"; };
 		52E2A60727F499AC00E69F18 /* MvUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvUser.swift; sourceTree = "<group>"; };
 		52E2A60927F49B0F00E69F18 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				52DF3FF328301EB10070550C /* AdminOrdersView.swift */,
+				52DF40412853904F0070550C /* AddProductView.swift */,
 				52DF4003283811580070550C /* OrderView.swift */,
 			);
 			path = AdminInterface;
@@ -297,6 +300,7 @@
 				52DF3FF428301EB10070550C /* AdminOrdersView.swift in Sources */,
 				524A55F527CF862000205201 /* PizzaShopWithSwiftUIApp.swift in Sources */,
 				52BDE58B282661E60013F8C8 /* OrderCell.swift in Sources */,
+				52DF40422853904F0070550C /* AddProductView.swift in Sources */,
 				5249FDA82820486A00F530BA /* OrderStatus.swift in Sources */,
 				524A566027D3EF5100205201 /* ProfileView.swift in Sources */,
 				524A566827D522F600205201 /* ProductCell.swift in Sources */,

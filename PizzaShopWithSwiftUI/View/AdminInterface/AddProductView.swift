@@ -14,9 +14,13 @@ struct AddProductView: View {
     
     var body: some View {
         VStack {
-            Image(systemName: "pizzaPH").onTapGesture {
+            Image("bg").onTapGesture {
                 showImagePicker.toggle()
             }
+        }
+        .sheet(isPresented: $showImagePicker) {
+            ImagePicker(sourceType: .photoLibrary,
+                        selectedImage: $image)
         }
     }
 }

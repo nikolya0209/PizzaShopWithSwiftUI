@@ -11,6 +11,9 @@ struct AddProductView: View {
     
     @State private var showImagePicker = false
     @State private var image = UIImage(named: "pizzaPH")!
+    @State private var title: String = ""
+    @State private var price: Int? = nil
+    @State private var descript: String = ""
     
     var body: some View {
         VStack {
@@ -21,7 +24,14 @@ struct AddProductView: View {
                 .onTapGesture {
                 showImagePicker.toggle()
             }
+            TextField("Название продукта", text: $title)
+                .padding()
+            TextField("Цена продукта", value: $price, format: .number)
+                .padding()
+            TextField("Описание продукта", text: $title)
+                .padding()
         }
+        .padding()
         .sheet(isPresented: $showImagePicker) {
             ImagePicker(sourceType: .photoLibrary,
                         selectedImage: $image)

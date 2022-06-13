@@ -10,11 +10,15 @@ import SwiftUI
 struct AddProductView: View {
     
     @State private var showImagePicker = false
-    @State private var image = UIImage()
+    @State private var image = UIImage(named: "pizzaPH")!
     
     var body: some View {
         VStack {
-            Image("bg").onTapGesture {
+            Image(uiImage: image)
+                .resizable()
+            frame(maxWidth: .infinity, maxHeight: 600)
+                .aspectRatio(contentMode: .fill)
+                .onTapGesture {
                 showImagePicker.toggle()
             }
         }

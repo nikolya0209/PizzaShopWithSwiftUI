@@ -21,8 +21,8 @@ struct AddProductView: View {
                 .font(.title2.bold())
             Image(uiImage: image)
                 .resizable()
-            frame(maxWidth: .infinity, maxHeight: 600)
-                .aspectRatio(contentMode: .fill)
+                .frame(maxWidth: .infinity, minHeight: 300, maxHeight: 320)
+                .aspectRatio(contentMode: .fit)
                 .onTapGesture {
                 showImagePicker.toggle()
             }

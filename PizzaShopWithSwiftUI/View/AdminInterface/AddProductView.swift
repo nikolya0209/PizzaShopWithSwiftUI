@@ -30,6 +30,17 @@ struct AddProductView: View {
                 .padding()
             TextField("Описание продукта", text: $title)
                 .padding()
+            Button {
+                print("Сохранить")
+            } label: {
+                Text("Сохранить")
+                    .padding()
+                    .padding(.horizontal, 30)
+                    .background(.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(16)
+            }
+            Spacer()
         }
         .padding()
         .sheet(isPresented: $showImagePicker) {

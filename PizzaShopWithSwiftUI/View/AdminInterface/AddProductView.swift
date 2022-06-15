@@ -17,6 +17,8 @@ struct AddProductView: View {
     
     var body: some View {
         VStack {
+            Text("Добавить товар")
+                .font(.title2.bold())
             Image(uiImage: image)
                 .resizable()
             frame(maxWidth: .infinity, maxHeight: 600)
@@ -24,6 +26,7 @@ struct AddProductView: View {
                 .onTapGesture {
                 showImagePicker.toggle()
             }
+                .cornerRadius(24)
             TextField("Название продукта", text: $title)
                 .padding()
             TextField("Цена продукта", value: $price, format: .number)

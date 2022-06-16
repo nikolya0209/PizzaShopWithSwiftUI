@@ -30,6 +30,7 @@ struct AddProductView: View {
             TextField("Название продукта", text: $title)
                 .padding()
             TextField("Цена продукта", value: $price, format: .number)
+                .keyboardType(.numberPad)
                 .padding()
             TextField("Описание продукта", text: $title)
                 .padding()
